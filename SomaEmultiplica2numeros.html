@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Primeiro Programa em JAVA</h2>
+
+<p>Soma e multiplica 2 numeros</p>
+
+<p id="demo"></p>
+<p> <input id="a" type= "number"> </p>
+<p> <input id="b" type= "number"> </p>
+
+<button type = "button"
+onclick = "soma()">Soma</button>
+
+<button type = "button"
+onclick = "vezes()">Produto</button>
+
+
+<p id = "demo"></p>
+<script>
+function soma(){
+var a, b, c;
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+var c = a + b;
+document.getElementById("demo").innerHTML = "O valor dessa poha vale " + c + ".";
+}
+
+function vezes(){
+var a, b, c;
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+var c = a * b;
+document.getElementById("demo").innerHTML = "O valor dessa merda vale " + c + ".";
+}
+
+</script>
+
+</body>
+</html>

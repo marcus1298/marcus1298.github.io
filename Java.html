@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Primeiro Programa em JAVA</h2>
+
+<p>Soma e multiplica 2 numeros</p>
+
+<ul>
+<li><input id="x" type= "text"> </li>
+<li> <input id="y" type= "text"> </li>
+</ul>
+
+<label><input type="radio" id="soma"> Soma</label>
+<label><input type="radio" id="subtrai"> Subtrai</label>
+<label><input type="radio" id="multiplica"> multiplica</label>
+<label><input type="radio" id="divide"> divide</label>
+
+<button type = "button"
+onclick = "opera()">Opera X|Y </button>
+<p id = "resp"></p>
+<script>
+function opera(){
+var x = parseFloat(document.getElementById('x').value);
+var y = parseFloat(document.getElementById('y').value);
+var op;
+
+if(document.getElementById('soma').checked ==true){
+   op = x + y
+}
+else if(document.getElementById('subtrai').checked ==true){
+   op = x - y
+}
+else if(document.getElementById('multiplica').checked ==true){
+   x = Math.round (x);
+   x = Math.round (y);
+   op = 0;
+   
+   for(i=0; i< y; i++){
+      op += x;
+
+   }
+}
+else if(document.getElementById('divide').checked ==true){
+   op = x/y
+}
+
+else{
+op  = "Atenção! Selecione alguma operação"
+
+}
+
+if(isNaN(op) && typepf(op) != "string"){
+op = "Verifique suas entradas filho da"
+
+}
+document.getElementById('resp').innerHTML = op;
+}
+
+</script>
+
+</body>
+</html>
